@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Car & Bike Showroom</title>
+  <meta name="description" content="Find your dream car or bike. Explore top brands, book test rides, and get exclusive offers." />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --primary:#2563eb; /* blue-600 */
+      --primary-dark:#1e40af;
+      --bg:#f8fafc;
+      --ink:#0f172a;
+      --muted:#475569;
+      --card:#ffffff;
+      --shadow:0 10px 25px rgba(0,0,0,.06),0 4px 10px rgba(0,0,0,.04);
+    }
+    * { box-sizing:border-box; margin:0; padding:0; }
+    body { font-family:Inter, sans-serif; background:var(--bg); color:var(--ink); }
+    a { color:var(--primary); text-decoration:none; }
+    header { background:#fff; position:sticky; top:0; z-index:10; box-shadow:var(--shadow); }
+    .container { max-width:1200px; margin:auto; padding:0 20px; }
+    .nav { display:flex; justify-content:space-between; align-items:center; height:70px; }
+    .brand { font-weight:800; font-size:1.5rem; color:var(--primary-dark); }
+    .nav-links { display:flex; gap:1rem; }
+    .nav-links a { font-weight:600; color:var(--muted); padding:.5rem .8rem; border-radius:8px; }
+    .nav-links a:hover { background:#e2e8f0; color:var(--ink); }
+    .btn { display:inline-block; padding:.8rem 1.2rem; border-radius:999px; font-weight:700; transition:.2s; cursor:pointer; }
+    .btn-primary { background:var(--primary); color:#fff; }
+    .btn-primary:hover { background:var(--primary-dark); }
+    .hero { display:grid; grid-template-columns:1fr 1fr; gap:32px; align-items:center; padding:60px 0; }
+    .hero h1 { font-size:clamp(2rem,5vw,3rem); font-weight:800; margin-bottom:1rem; }
+    .hero p { font-size:1.1rem; color:var(--muted); margin-bottom:1.5rem; }
+    .hero img { border-radius:16px; box-shadow:var(--shadow); width:100%; }
+    section { padding:60px 0; }
+    .section-title { font-size:2rem; font-weight:800; margin-bottom:24px; text-align:center; }
+    .grid { display:grid; gap:20px; }
+    .grid.cols-3 { grid-template-columns:repeat(3,1fr); }
+    .card { background:var(--card); border-radius:16px; overflow:hidden; box-shadow:var(--shadow); }
+    .card img { width:100%; height:200px; object-fit:cover; }
+    .card-body { padding:16px; }
+    .card-body h3 { margin-bottom:.5rem; font-size:1.2rem; }
+    .card-body p { color:var(--muted); margin-bottom:1rem; }
+    footer { background:#fff; border-top:1px solid #e2e8f0; padding:30px 0; text-align:center; color:var(--muted); }
+    @media(max-width:900px){ .hero{grid-template-columns:1fr;} .grid.cols-3{grid-template-columns:1fr 1fr;} }
+    @media(max-width:600px){ .grid.cols-3{grid-template-columns:1fr;} }
+  </style>
+</head>
+<body>
+  <!-- Header -->
+  <header>
+    <div class="container nav">
+      <div class="brand">Car & Bike</div>
+      <nav class="nav-links">
+        <a href="#cars">Cars</a>
+        <a href="#bikes">Bikes</a>
+        <a href="#offers">Offers</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section class="hero container">
+    <div>
+      <h1>Find Your Dream Ride</h1>
+      <p>Explore a wide range of cars and bikes from top brands. Book test rides, compare models, and grab exclusive deals — all in one place.</p>
+      <a href="#cars" class="btn btn-primary">Explore Now</a>
+    </div>
+    <img src="https://images.unsplash.com/photo-1549924231-f129b911e442?q=80&w=1200&auto=format&fit=crop" alt="Car and Bike" />
+  </section>
+
+  <!-- Cars -->
+  <section id="cars">
+    <div class="container">
+      <h2 class="section-title">Popular Cars</h2>
+      <div class="grid cols-3">
+        <div class="card">
+          <img src="https://images.unsplash.com/photo-1503376780353-7e6692767b70?q=80&w=1200&auto=format&fit=crop" alt="Sedan Car" />
+          <div class="card-body">
+            <h3>Luxury Sedan</h3>
+            <p>Comfort and elegance with premium features.</p>
+            <a class="btn btn-primary">Book Test Drive</a>
+          </div>
+        </div>
+        <div class="card">
+          <img src="https://images.unsplash.com/photo-1502877338535-766e1452684a?q=80&w=1200&auto=format&fit=crop" alt="SUV Car" />
+          <div class="card-body">
+            <h3>Sport SUV</h3>
+            <p>Powerful performance and spacious interiors.</p>
+            <a class="btn btn-primary">Book Test Drive</a>
+          </div>
+        </div>
+        <div class="card">
+          <img src="https://images.unsplash.com/photo-1493238792000-8113da705763?q=80&w=1200&auto=format&fit=crop" alt="Hatchback Car" />
+          <div class="card-body">
+            <h3>Urban Hatchback</h3>
+            <p>Compact, stylish, and perfect for city rides.</p>
+            <a class="btn btn-primary">Book Test Drive</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Bikes -->
+  <section id="bikes">
+    <div class="container">
+      <h2 class="section-title">Popular Bikes</h2>
+      <div class="grid cols-3">
+        <div class="card">
+          <img src="https://images.unsplash.com/photo-1504215680853-026ed2a45def?q=80&w=1200&auto=format&fit=crop" alt="Sport Bike" />
+          <div class="card-body">
+            <h3>Sport Bike</h3>
+            <p>Speed, style, and performance for thrill seekers.</p>
+            <a class="btn btn-primary">Book Test Ride</a>
+          </div>
+        </div>
+        <div class="card">
+          <img src="https://images.unsplash.com/photo-1503736334956-4c8f8e92946d?q=80&w=1200&auto=format&fit=crop" alt="Cruiser Bike" />
+          <div class="card-body">
+            <h3>Cruiser</h3>
+            <p>Perfect for long journeys with comfort and style.</p>
+            <a class="btn btn-primary">Book Test Ride</a>
+          </div>
+        </div>
+        <div class="card">
+          <img src="https://images.unsplash.com/photo-1617817126101-6a39aea66e89?q=80&w=1200&auto=format&fit=crop" alt="Scooter" />
+          <div class="card-body">
+            <h3>Scooter</h3>
+            <p>Easy rides for daily commutes and city travel.</p>
+            <a class="btn btn-primary">Book Test Ride</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Offers -->
+  <section id="offers" style="background:#e0f2fe">
+    <div class="container">
+      <h2 class="section-title">Special Offers</h2>
+      <p style="text-align:center;color:var(--muted)">Get up to <strong>₹50,000 off</strong> on selected models this festive season!</p>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact">
+    <div class="container">
+      <h2 class="section-title">Contact Us</h2>
+      <p style="text-align:center">Email: <a href="mailto:sales@carandbike.com">sales@carandbike.com</a> | Phone: +91 98765 43210</p>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      © <span id="year"></span> Car & Bike Showroom. All rights reserved.
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
